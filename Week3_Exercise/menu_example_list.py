@@ -86,6 +86,19 @@ def run_menu_two(a_value):
     run_menu(menu_two)
     return True
 
+def run_menu_three(a_value):
+    menu_three =  [\
+                    "Select a number.",\
+                    [1,"Menu Pizza",test_cmd],  \
+                    [2,"Menu Spaghetti",test_cmd],   \
+                    [3,"Menu Rissoto",test_cmd],   \
+                    [4,"Menu Salad",test_cmd],   \
+                    [5,"Menu Coffee",test_cmd],   \
+                    [6,"Quit",quit_cmd]\
+                ]
+    run_menu(menu_three)
+    return True
+
 def test_cmd(a_value):
     print("A dummy command {}".format(a_value))
     return True # contine
