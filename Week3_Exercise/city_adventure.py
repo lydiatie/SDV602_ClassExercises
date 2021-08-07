@@ -1,8 +1,6 @@
 
 def transportation_question(cash_in_hand, destination_choice):
-    transportation_choice = input(f'Please select and enter the type of transportation \
-                                    to go to the {destination_choice}.\nBus, Train or \
-                                    type "back" to the previous question\n').lower()
+    transportation_choice = input(f'Please select and enter the type of transportation to go to the {destination_choice}.\nBus, Train or type "back" to the previous question\n').lower()
     
     if transportation_choice == 'train':
         train(cash_in_hand, destination_choice)
@@ -20,9 +18,7 @@ def transportation_question(cash_in_hand, destination_choice):
     
 def first_question():
     cash_in_hand = 100
-    destination_choice = input('You have just arrived in Auckland Airport.\n\
-                                Please select from the list below and enter \
-                                the place you want to go.\nHotel, Skytower or Museum\n').lower()
+    destination_choice = input('You have just arrived in Auckland Airport.\nPlease select from the list below and enter the place you want to go.\nHotel, Skytower or Museum\n').lower()
     
     if destination_choice == 'hotel' or \
        destination_choice == 'skytower' or \
@@ -43,9 +39,7 @@ def train(cash_in_hand,destination_choice):
                         }
 
     list_dictionary = train_dictionary[destination_choice]
-    train_confirmation = input(f'The train takes {list_dictionary[0]} to arrive {destination_choice} \
-                               and the fare is ${list_dictionary[1]}.\nYou have ${cash_in_hand}. \
-                               Do you want to proceed?\nType yes to confirm or no to back.\n').lower()
+    train_confirmation = input(f'The train takes {list_dictionary[0]} to arrive {destination_choice} and the fare is ${list_dictionary[1]}.\nYou have ${cash_in_hand}. Do you want to proceed?\nType yes to confirm or no to back.\n').lower()
     
     if train_confirmation == 'yes':
         cash_in_hand = cash_in_hand - list_dictionary[1]
@@ -67,9 +61,7 @@ def bus(cash_in_hand, destination_choice):
                      }
     
     list_dictionary = bus_dictionary[destination_choice] 
-    confirmation = input(f'The bus takes {list_dictionary[0]} to arrive {destination_choice} \
-                        and the fare is ${list_dictionary[1]}.\nYou have ${cash_in_hand}. \
-                        Do you want to proceed?\nType yes to confirm or no to back.\n').lower()
+    confirmation = input(f'The bus takes {list_dictionary[0]} to arrive {destination_choice} and the fare is ${list_dictionary[1]}.\nYou have ${cash_in_hand}.Do you want to proceed?\nType yes to confirm or no to back.\n').lower()
     
     if confirmation == 'yes':
         cash_in_hand = cash_in_hand - list_dictionary[1]
